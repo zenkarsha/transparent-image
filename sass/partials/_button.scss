@@ -1,0 +1,18 @@
+.link {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  margin-top: 3px;
+  background: none; border: none;
+  background-image: url('../images/link.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  outline: none;
+  background-color: #e3e3e3;
+  outline: 1px solid #bbb;
+  &.unlink {
+    background-position: -25px 0;
+    background-color: #eee;
+    outline: 1px solid #eee;
+  }
+}

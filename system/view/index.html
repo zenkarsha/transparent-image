@@ -1,0 +1,74 @@
+---
+$title
+$description
+$path
+---
+
+<div class="row">
+  <div class="col-sm-6 col-md-7 col-lg-8" style="height:inherit">
+    <div class="preview">
+      <div id="coverprint"></div>
+      <div id="loading"><div><img src="{{$path}}images/loading.gif"></div></div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-5 col-lg-4 text-center" id="generator">
+    <h1>{{$title}}</h1>
+    <h2>{{$description}}</h2>
+    <form role="form" action="generate" id="iamForm" method="post">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-xs-5">
+              <div class="form-group">
+                <label for="image_w">圖片寬度</label>
+                <input type="text" class="form-control" id="image_w" name="image_w" value="400">
+              </div>
+            </div>
+            <div class="col-xs-2" style="text-align:center">
+                <label>&nbsp;</label>
+                <div class="clear"></div>
+                <div class="link"></div>
+            </div>
+            <div class="col-xs-5">
+              <div class="form-group">
+                <label for="image_h">圖片高度</label>
+                <input type="text" class="form-control" id="image_h" name="image_h" value="400">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <label for="blank_level">透明度</label>
+          <select class="form-control" name="blank_level" id="blank_level">
+            <option value="5">有點透明</option>
+            <option value="10" selected="selected">一般</option>
+            <option value="15">再透明</option>
+            <option value="20">更透明</option>
+            <option value="30">非常透明</option>
+            <option value="40">實在非常透明</option>
+            <option value="80">太透明了！太透明了！看不到了！</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12" id="settings">
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="bgcolor">透明顏色</label>
+              <input type="text" name="bgcolor" id="bgcolor" class="form-control minicolors" value="#ffffff" data-color-format="hex">
+            </div>
+            <div class="col-sm-6">
+              <label for="color">透明顏色</label>
+              <input type="text" name="color" id="color" class="form-control minicolors" value="#cccccc" data-color-format="hex">
+            </div>
+          </div>
+        </div>
+      </div>
+      <input type="hidden" value="" name="directpost" id="directpost">
+      <input type="button" value="按此下載圖片" class="submit btn btn-danger btn-lg" id="normalSubmit">
+    </form>
+  </div>
+</div>
+<div id="show"><i class="glyphicon glyphicon-eye-open"></i></div>
